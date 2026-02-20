@@ -1,0 +1,4 @@
+flask
+torch
+torchaudio
+git+https://github.com/resemble-ai/chatterbox.git
