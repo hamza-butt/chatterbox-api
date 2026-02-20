@@ -17,7 +17,6 @@ __pycache__/
 # Temporary output files (just in case)
 outputs/
 *.wav
-*.mp3
 
 # IDEs
 .idea/
