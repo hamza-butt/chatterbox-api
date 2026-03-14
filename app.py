@@ -10,8 +10,14 @@ from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 
 app = Flask(__name__)
 
-# Detect device (Mac with M1/M2/M3/M4)
-device = "mps" if torch.backends.mps.is_available() else "cpu"
+# Detect device (CUDA for RunPod/GPU, MPS for Mac M1-M4)
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"
+else:
+    device = "cpu"
+
 map_location = torch.device(device)
 
 torch_load_original = torch.load
