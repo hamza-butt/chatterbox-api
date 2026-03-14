@@ -6,7 +6,7 @@ URL = "http://localhost:5001/generate"
 def main():
     payload = {
         "text": "Hallo, wie geht es dir heute? Dies is ein Test der deutschen Sprache.",
-        "audio_prompt_path": "reference.mp3",
+        "audio_prompt_path": "reference.wav",
         "exaggeration": 0.5,
         "cfg_weight": 0.5
     }
